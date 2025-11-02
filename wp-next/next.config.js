@@ -5,9 +5,9 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
+        protocol: "https",
         hostname: process.env.NEXT_IMAGE_HOSTNAME,
-        pathname: '/**',
+        pathname: "/**",
       },
     ],
   },
@@ -18,6 +18,11 @@ const nextConfig = {
     NEXT_INTERNAL_API_BASE_URL: process.env.NEXT_INTERNAL_API_BASE_URL,
     API_KEY: process.env.API_KEY,
   },
+
+  distDir: "./next-build",
+  images: { unoptimized: true },
+  basePath: "/wp-content/themes/core-theme/next-build",
+  assetPrefix: "/wp-content/themes/core-theme/next-build/",
 };
 
 module.exports = nextConfig;
