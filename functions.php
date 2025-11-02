@@ -116,6 +116,27 @@ function core_theme_content_width()
 }
 add_action('after_setup_theme', 'core_theme_content_width', 0);
 
+// Run when the theme is activated
+function core_theme_create_portal_page()
+{
+	$portal_page = get_page_by_path('portal');
+
+	if (!$portal_page) {
+		$new_page_id = wp_insert_post(array(
+			'post_title' => 'Portal',
+			'post_name' => 'portal',
+			'post_content' => '',
+			'post_status' => 'publish',
+			'post_type' => 'page',
+		));
+
+		if ($new_page_id && !is_wp_error($new_page_id)) {
+			update_post_meta($new_page_id, '_wp_page_template', 'template-portal.php');
+		}
+	}
+}
+add_action('after_switch_theme', 'core_theme_create_portal_page');
+
 /**
  * Register widget area.
  *
