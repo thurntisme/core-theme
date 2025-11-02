@@ -164,12 +164,6 @@ add_action('widgets_init', 'core_theme_widgets_init');
 function core_theme_scripts()
 {
 	wp_enqueue_style('core-theme-style', get_stylesheet_uri(), array(), _S_VERSION);
-
-	wp_enqueue_script('core-theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
-
-	if (is_singular() && comments_open() && get_option('thread_comments')) {
-		wp_enqueue_script('comment-reply');
-	}
 }
 add_action('wp_enqueue_scripts', 'core_theme_scripts');
 
@@ -192,6 +186,8 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+require get_template_directory() . '/inc/portal-config.php';
 
 /**
  * Load Jetpack compatibility file.
