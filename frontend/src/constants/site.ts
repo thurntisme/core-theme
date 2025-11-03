@@ -1,7 +1,7 @@
-export const MEASUREMENT_ID = 'G-1KPBS80QZL';
-export const GTM_ID = 'GTM-WRVS7FN2';
+// export const MEASUREMENT_ID = 'G-1KPBS80QZL';
+// export const GTM_ID = 'GTM-WRVS7FN2';
 
-export const SITE_URL = process.env.SITE_URL;
+export const SITE_URL = '';
 export const SUB_PAGE_URL = SITE_URL + '/w';
 
 export const FOOTBALL_PATH = '/w/football';
