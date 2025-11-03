@@ -42,3 +42,23 @@ function core_theme_portal_enqueue_react_app()
     }
 }
 add_action('wp_enqueue_scripts', 'core_theme_portal_enqueue_react_app');
+
+// React SPA fallback
+function core_theme_portal_react_spa_fallback()
+{
+    if (is_admin())
+        return;
+
+    $react_index = get_template_directory() . '/frontend/dist/index.html';
+
+    if (file_exists($react_index)) {
+
+        if (!is_page() && !is_single() && !is_category() && !is_tag() && !is_home()) {
+            status_header(200);
+            nocache_headers();
+            echo file_get_contents($react_index);
+            exit;
+        }
+    }
+}
+add_action('template_redirect', 'core_theme_portal_react_spa_fallback');
