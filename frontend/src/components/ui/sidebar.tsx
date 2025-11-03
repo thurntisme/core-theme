@@ -1,7 +1,8 @@
 /* eslint-disable no-redeclare */
 import * as React from 'react';
 
-import { VariantProps, cva } from 'class-variance-authority';
+import { cva } from 'class-variance-authority';
+import type { VariantProps } from 'class-variance-authority';
 import { PanelLeft } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';

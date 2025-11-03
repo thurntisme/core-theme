@@ -5,14 +5,32 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Calendar, Clock, Tag } from 'lucide-react';
 
-// import { CommentBox } from '@/components/ui/comment-box';
-import LANDING_ENDPOINTS from '@/constants/api/landing';
-import { internalApi } from '@/lib/api/internal';
 import type { IBlog } from '@/types/blog';
-import { useQuery } from '@tanstack/react-query';
 
-export default function BlogPost({ params }: { params: { slug: string } }) {
-  const blog: IBlog | null = null;
+export default function BlogPost() {
+  const blog: IBlog = {
+    id: '1',
+    title: 'Understanding React Hooks: A Comprehensive Guide',
+    slug: 'understanding-react-hooks',
+    image:
+      'https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=1470&q=80',
+    date: 'March 15, 2023',
+    readTime: '8 min read',
+    category: 'React',
+    excerpt:
+      'An in-depth look at React Hooks, their benefits, and how to use them effectively in your applications.',
+    content: `<p>React Hooks have revolutionized the way we build components in React. They allow us to use state and other React features without writing a class. In this comprehensive guide, we'll explore the most commonly used hooks and how to leverage them in your applications.</p>
+    <h2>useState</h2>
+    <p>The useState hook is used to add state to functional components. It returns a stateful value and a function to update it.</p>
+    <pre><code>const [count, setCount] = useState(0);</code></pre>
+    <h2>useEffect</h2>
+    <p>The useEffect hook lets you perform side effects in function components. It serves the same purpose as componentDidMount, componentDidUpdate, and componentWillUnmount in React classes.</p>
+    <pre><code>useEffect(() => {
+  document.title = \`You clicked \${count} times\`;
+}, [count]);</code></pre>
+    <h2>Conclusion</h2>
+    <p>React Hooks provide a powerful way to manage state and side effects in functional components. By understanding and utilizing hooks like useState and useEffect, you can write cleaner and more efficient React code.</p>`,
+  };
 
   const renderContent = () => {
     if (blog) {

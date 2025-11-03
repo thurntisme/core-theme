@@ -41,7 +41,7 @@ const project = {
   role: 'Lead Developer',
 };
 
-export default function ProjectDetail({ params }: { params: { id: string } }) {
+export default function ProjectDetail() {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}

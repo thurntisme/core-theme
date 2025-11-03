@@ -6,9 +6,7 @@ import Footer from './Footer';
 import Navbar from './Navbar';
 import Providers from './Providers';
 
-type Props = {};
-
-const LandingLayout = (props: Props) => {
+const LandingLayout = () => {
   return (
     <Providers>
       <div className="min-h-screen bg-background">

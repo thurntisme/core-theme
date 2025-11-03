@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import LandingLayout from './components/layouts/landing/LandingLayout';

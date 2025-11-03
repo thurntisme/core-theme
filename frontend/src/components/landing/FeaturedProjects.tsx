@@ -1,25 +1,12 @@
 'use client';
 
-import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 
 import ProjectCard from '@/components/landing/ProjectCard';
-import LANDING_ENDPOINTS from '@/constants/api/landing';
-import { internalApi } from '@/lib/api/internal';
 import { projects } from '@/mock/projects';
-import { useQuery } from '@tanstack/react-query';
-
-interface FeaturedProjectProps {
-  slug: string;
-  title: string;
-  description: string;
-  category: string;
-  image: string;
-  externalLink: string;
-}
 
 const FeaturedProjects = () => {
   const data = projects.slice(0, 4);

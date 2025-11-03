@@ -6,10 +6,7 @@ import { motion } from 'framer-motion';
 import { Search, X } from 'lucide-react';
 
 import BlogCard from '@/components/landing/BlogCard';
-import LANDING_ENDPOINTS from '@/constants/api/landing';
-import { internalApi } from '@/lib/api/internal';
 import type { IBlog } from '@/types/blog';
-import { useQuery } from '@tanstack/react-query';
 
 const categories = ['All', 'Web Development', 'Design', 'React', 'TypeScript'];
 

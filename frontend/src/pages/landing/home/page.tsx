@@ -3,9 +3,7 @@ import FeaturedProjects from '@/components/landing/FeaturedProjects';
 import Hero from '@/components/landing/Hero';
 import RecentBlog from '@/components/landing/RecentBlog';
 
-type Props = {};
-
-const HomePage = (props: Props) => {
+const HomePage = () => {
   return (
     <>
       <Hero />

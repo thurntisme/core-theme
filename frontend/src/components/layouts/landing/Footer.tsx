@@ -1,5 +1,3 @@
-import { Github, Linkedin } from 'lucide-react';
-
 import { SOCIAL_LINKS } from '@/constants/landing';
 
 export default function Footer() {

@@ -1,4 +1,4 @@
-import React, { JSXElementConstructor, ReactElement } from 'react';
+import React, { type JSXElementConstructor, type ReactElement } from 'react';
 
 import {
   BarChart as RechartsBarChart,
