@@ -2,11 +2,11 @@
 /**
  * Template Name: Portal Page
  */
-get_header();
+get_header('blank');
 ?>
 
-<div id="__next">
+<main id="root">
     <!-- React app will be mounted here -->
-</div>
+</main>
 
-<?php get_footer(); ?>
+<?php get_footer('blank'); ?>
