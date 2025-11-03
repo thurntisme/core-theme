@@ -11,4 +11,9 @@ export default defineConfig({
       '@': path.resolve(__dirname, 'src'),
     },
   },
+  base: '/wp-content/themes/core-theme/frontend/',
+  build: {
+    manifest: true,
+    outDir: 'dist',
+  },
 });
