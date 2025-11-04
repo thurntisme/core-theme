@@ -33,7 +33,7 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
-import { type IncomeEntry, incomeStorage } from '@/lib/p/income-storage';
+import { type IncomeEntry, incomeStorage } from '@/lib/income-storage';
 
 export default function HomePage() {
   const [entries, setEntries] = useState<IncomeEntry[]>([]);

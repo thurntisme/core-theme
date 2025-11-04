@@ -67,9 +67,9 @@ import {
 } from '@/components/ui/select';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Textarea } from '@/components/ui/textarea';
-import { expenseCategories } from '@/constants/p/finance';
+import { expenseCategories } from '@/constants/finance';
 import { PORTAL_URL } from '@/constants/site';
-import { PlannedExpense, RealExpense } from '@/types/portal';
+import type { PlannedExpense, RealExpense } from '@/types/portal';
 
 const addPoints = (action: string, points: number) => {
   const today = new Date().toISOString().split('T')[0];

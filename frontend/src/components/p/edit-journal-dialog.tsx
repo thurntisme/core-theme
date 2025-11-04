@@ -12,8 +12,8 @@ import {
 } from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { emojiMoodOptions } from '@/constants/p/journal';
-import { JournalEntry } from '@/types/portal';
+import { emojiMoodOptions } from '@/constants/journal';
+import type { JournalEntry } from '@/types/portal';
 
 type Props = {
   open: boolean;

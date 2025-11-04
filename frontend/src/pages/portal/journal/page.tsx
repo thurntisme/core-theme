@@ -11,10 +11,10 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import ConfirmDeleteBtn from '@/components/ui/confirm-delete-btn';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { emojiMoodOptions } from '@/constants/p/journal';
-import { getMoodColor } from '@/lib/p/journal';
+import { emojiMoodOptions } from '@/constants/journal';
+import { getMoodColor } from '@/lib/journal';
 import { formatDate } from '@/lib/utils';
-import { JournalEntry } from '@/types/portal';
+import type { JournalEntry } from '@/types/portal';
 
 export default function JournalApp() {
   const [entries, setEntries] = useState<JournalEntry[]>([

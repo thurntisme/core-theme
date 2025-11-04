@@ -53,7 +53,7 @@ import {
 } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
 import { PORTAL_URL } from '@/constants/site';
-import { Exercise } from '@/types/portal';
+import type { Exercise } from '@/types/portal';
 import { useQuery } from '@tanstack/react-query';
 
 const exerciseCategories = [

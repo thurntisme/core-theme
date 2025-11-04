@@ -11,7 +11,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from '@/components/ui/dialog';
-import { DailyReport } from '@/types/portal';
+import type { DailyReport } from '@/types/portal';
 
 interface ReportPreviewProps {
   open: boolean;

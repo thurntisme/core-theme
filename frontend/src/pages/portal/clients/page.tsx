@@ -9,7 +9,7 @@ import EditClientDialog from '@/components/p/edit-client-dialog';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
-import { Client } from '@/types/portal';
+import type { Client } from '@/types/portal';
 import { useQuery } from '@tanstack/react-query';
 
 const initFormData: Client = {

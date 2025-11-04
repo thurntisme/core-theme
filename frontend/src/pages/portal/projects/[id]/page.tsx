@@ -54,7 +54,7 @@ import {
 } from '@/components/ui/select';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Textarea } from '@/components/ui/textarea';
-import { Estimation, Project, Task } from '@/types/portal';
+import type { Estimation, Project, Task } from '@/types/portal';
 
 export default function ProjectDetailPage({
   params,

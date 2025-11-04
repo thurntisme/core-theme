@@ -26,7 +26,7 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
-import { Plan } from '@/types/portal';
+import type { Plan } from '@/types/portal';
 import { useQuery } from '@tanstack/react-query';
 
 export default function PlanPage() {

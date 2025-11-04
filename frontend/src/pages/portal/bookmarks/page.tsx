@@ -54,7 +54,7 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
-import { defaultCategories } from '@/constants/p/bookmark';
+import { defaultCategories } from '@/constants/bookmark';
 
 interface FormData {
   id?: string;

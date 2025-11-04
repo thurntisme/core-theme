@@ -50,8 +50,8 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
-import { habitCategories, habitColors, weekDays } from '@/constants/p/habit';
-import { Habit, HabitCompletion } from '@/types/portal';
+import { habitCategories, habitColors, weekDays } from '@/constants/habit';
+import type { Habit, HabitCompletion } from '@/types/portal';
 import { useQuery } from '@tanstack/react-query';
 
 export default function HabitsPage() {

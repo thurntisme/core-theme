@@ -27,7 +27,7 @@ import {
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { PORTAL_URL } from '@/constants/site';
-import { Exercise, WorkoutSession } from '@/types/portal';
+import type { Exercise, WorkoutSession } from '@/types/portal';
 import { useQuery } from '@tanstack/react-query';
 
 export default function TodayWorkoutPage() {

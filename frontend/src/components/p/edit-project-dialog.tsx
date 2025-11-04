@@ -24,7 +24,7 @@ import {
 } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
 import { clients } from '@/mock/portal';
-import { Project } from '@/types/portal';
+import type { Project } from '@/types/portal';
 
 import ActionButtonGroup from './action-button-group';
 

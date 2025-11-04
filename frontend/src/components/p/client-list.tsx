@@ -18,7 +18,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import ConfirmDeleteBtn from '@/components/ui/confirm-delete-btn';
-import { Client } from '@/types/portal';
+import type { Client } from '@/types/portal';
 
 type Props = {
   clients: Client[];

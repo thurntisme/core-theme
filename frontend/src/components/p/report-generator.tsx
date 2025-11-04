@@ -22,8 +22,8 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Separator } from '@/components/ui/separator';
-import { incomeStorage } from '@/lib/p/income-storage';
-import { type ReportOptions, reportGenerator } from '@/lib/p/report-generator';
+import { incomeStorage } from '@/lib/income-storage';
+import { type ReportOptions, reportGenerator } from '@/lib/report-generator';
 
 export function ReportGenerator() {
   const [reportType, setReportType] = useState<

@@ -13,10 +13,10 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { toolCategories } from '@/constants/p/tools';
 import { PORTAL_URL } from '@/constants/site';
-import { addPoints } from '@/lib/p/point';
-import { PortalTool } from '@/types/portal';
+import { toolCategories } from '@/constants/tools';
+import { addPoints } from '@/lib/point';
+import type { PortalTool } from '@/types/portal';
 
 export default function DashboardPage() {
   const navigate = useNavigate();

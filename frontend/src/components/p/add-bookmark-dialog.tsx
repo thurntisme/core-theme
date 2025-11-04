@@ -22,8 +22,8 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
-import { defaultCategories } from '@/constants/p/bookmark';
-import { BookmarkItem } from '@/types/portal';
+import { defaultCategories } from '@/constants/bookmark';
+import type { BookmarkItem } from '@/types/portal';
 
 type Props = {
   isAddDialogOpen: boolean;

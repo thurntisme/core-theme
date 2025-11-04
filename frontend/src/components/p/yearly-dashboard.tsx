@@ -17,7 +17,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { incomeStorage } from '@/lib/p/income-storage';
+import { incomeStorage } from '@/lib/income-storage';
 
 interface YearlyData {
   year: number;

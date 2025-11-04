@@ -25,7 +25,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { PORTAL_URL } from '@/constants/site';
-import { Project } from '@/types/portal';
+import type { Project } from '@/types/portal';
 
 type Props = {
   projects: Project[];

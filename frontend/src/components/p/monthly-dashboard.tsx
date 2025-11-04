@@ -18,7 +18,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { type MonthlyData, incomeStorage } from '@/lib/p/income-storage';
+import { type MonthlyData, incomeStorage } from '@/lib/income-storage';
 
 export function MonthlyDashboard() {
   const [monthlyData, setMonthlyData] = useState<MonthlyData[]>([]);

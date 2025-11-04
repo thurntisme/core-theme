@@ -42,7 +42,7 @@ import {
 } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
 import { leaders } from '@/mock/portal';
-import { Leader } from '@/types/portal';
+import type { Leader } from '@/types/portal';
 
 export default function FamousPeoplePage() {
   const [people, setPeople] = useState<Leader[]>(leaders);

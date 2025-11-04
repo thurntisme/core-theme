@@ -21,7 +21,7 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
-import { incomeStorage } from '@/lib/p/income-storage';
+import { incomeStorage } from '@/lib/income-storage';
 
 interface IncomeEntryFormProps {
   open: boolean; // converted to modal props
