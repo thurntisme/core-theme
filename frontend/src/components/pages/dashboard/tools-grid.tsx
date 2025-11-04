@@ -21,10 +21,8 @@ const ToolsGrid = (props: Props) => {
   const navigate = useNavigate();
 
   const handleClick = (tool: PortalTool) => {
-    if (tool.status === 'active' && tool.slug) {
-      if (tool.slug.startsWith('/')) {
-        navigate(`${PORTAL_URL}/${tool.slug}`);
-      }
+    if (tool.status === 'active' && tool.slug && tool.slug !== '#') {
+      navigate(`${PORTAL_URL}/${tool.slug}`);
     }
   };
 

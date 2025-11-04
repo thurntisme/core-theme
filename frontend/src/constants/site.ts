@@ -17,3 +17,6 @@ export const ECOMMERCE_URL = SITE_URL + ECOMMERCE_PATH;
 export const ENGLISH_URL = SITE_URL + ENGLISH_PATH;
 export const FLEX_LIFE_URL = SITE_URL + FLEX_LIFE_PATH;
 export const PORTAL_URL = SITE_URL + '/portal';
+
+export const API_URL = '/wp-json/v1';
+export const API_SECRET_KEY = 'bestsecretkeyever';

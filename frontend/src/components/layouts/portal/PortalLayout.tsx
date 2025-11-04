@@ -6,6 +6,7 @@ import { Outlet, useNavigate } from 'react-router-dom';
 import Header from '@/components/p/header';
 import { PORTAL_URL } from '@/constants/site';
 import { isLoggedIn } from '@/lib/auth';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 import './app.css';
 
@@ -13,6 +14,7 @@ export default function PortalLayout() {
   const [loading, setLoading] = useState(true);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const navigate = useNavigate();
+  const queryClient = new QueryClient();
 
   useEffect(() => {
     const checkAuth = () => {
@@ -42,7 +44,9 @@ export default function PortalLayout() {
     <div id="portal-app">
       <Header isAuthenticated={isAuthenticated} />
       <div className="min-h-screen bg-gray-50">
-        <Outlet />
+        <QueryClientProvider client={queryClient}>
+          <Outlet />
+        </QueryClientProvider>
       </div>
     </div>
   );
