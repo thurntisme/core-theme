@@ -2,6 +2,7 @@
 
 import type React from 'react';
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import {
   AlertTriangle,
@@ -18,7 +19,6 @@ import {
   Upload,
   User,
 } from 'lucide-react';
-import { useRouter } from 'next/navigation';
 
 import {
   AlertDialog,
@@ -150,7 +150,7 @@ export default function SettingsPage() {
   const [saving, setSaving] = useState(false);
   const [settings, setSettings] = useState<Settings>(defaultSettings);
   const [activeTab, setActiveTab] = useState('profile');
-  const router = useRouter();
+  const navigate = useNavigate();
 
   useEffect(() => {
     loadSettings();

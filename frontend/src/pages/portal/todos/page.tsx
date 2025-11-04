@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import {
   AlertTriangle,
@@ -15,7 +16,6 @@ import {
   Search,
   Trash2,
 } from 'lucide-react';
-import { useRouter } from 'next/navigation';
 
 import {
   AlertDialog,
@@ -115,7 +115,7 @@ export default function TodosPage() {
     priority: 'medium' as Todo['priority'],
     category: 'Personal',
   });
-  const router = useRouter();
+  const navigate = useNavigate();
 
   const saveTodos = (updatedTodos: Todo[]) => {
     setTodos(updatedTodos);

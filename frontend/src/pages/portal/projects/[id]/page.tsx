@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import {
   AlertCircle,
@@ -18,7 +19,6 @@ import {
   User,
   XCircle,
 } from 'lucide-react';
-import { useRouter } from 'next/navigation';
 
 import {
   AlertDialog,
@@ -61,7 +61,7 @@ export default function ProjectDetailPage({
 }: {
   params: { id: string };
 }) {
-  const router = useRouter();
+  const navigate = useNavigate();
   const projectId = params.id as string;
 
   const [project, setProject] = useState<Project | null>(null);
@@ -443,7 +443,7 @@ export default function ProjectDetailPage({
           <h1 className="text-2xl font-bold text-gray-900 mb-4">
             Project Not Found
           </h1>
-          <Button onClick={() => router.push('/projects')}>
+          <Button onClick={() => navigate('/projects')}>
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to Projects
           </Button>

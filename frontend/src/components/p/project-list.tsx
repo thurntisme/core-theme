@@ -3,6 +3,7 @@ import { Button } from '../ui/button';
 import ConfirmDeleteBtn from '../ui/confirm-delete-btn';
 
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import {
   AlertCircle,
@@ -15,7 +16,6 @@ import {
   PlayCircle,
   User,
 } from 'lucide-react';
-import { useRouter } from 'next/navigation';
 
 import {
   Card,
@@ -64,7 +64,7 @@ const ProjectList = ({
   openEditDialog,
   onDeleteProject,
 }: Props) => {
-  const router = useRouter();
+  const navigate = useNavigate();
 
   const isOverdue = (deadline: string, status: Project['status']) => {
     if (status === 'done') return false;
@@ -134,7 +134,7 @@ const ProjectList = ({
                     size="icon"
                     className="h-8 w-8"
                     onClick={() =>
-                      router.push(`${PORTAL_URL}/projects/${project.id}`)
+                      navigate(`${PORTAL_URL}/projects/${project.id}`)
                     }
                     title="View project details"
                   >

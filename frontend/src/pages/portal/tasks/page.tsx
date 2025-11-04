@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import {
   AlertTriangle,
@@ -20,7 +21,6 @@ import {
   Trash2,
   User,
 } from 'lucide-react';
-import { useRouter } from 'next/navigation';
 
 import {
   AlertDialog,
@@ -165,7 +165,7 @@ export default function TasksPage() {
     priority: 'medium' as Task['priority'],
     notes: '',
   });
-  const router = useRouter();
+  const navigate = useNavigate();
 
   const saveTasks = (updatedTasks: Task[]) => {
     setTasks(updatedTasks);
@@ -506,7 +506,7 @@ export default function TasksPage() {
                 <div className="flex gap-2 justify-center">
                   {projects.length === 0 ? (
                     <Button
-                      onClick={() => router.push('/projects')}
+                      onClick={() => navigate('/projects')}
                       variant="outline"
                     >
                       Add Projects First

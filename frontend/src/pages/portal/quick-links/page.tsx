@@ -2,6 +2,7 @@
 
 import type React from 'react';
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import {
   ArrowLeft,
@@ -23,7 +24,6 @@ import {
   Trash2,
   Video,
 } from 'lucide-react';
-import { useRouter } from 'next/navigation';
 
 import {
   AlertDialog,
@@ -119,7 +119,7 @@ export default function QuickLinksPage() {
   const [isAddDialogOpen, setIsAddDialogOpen] = useState(false);
   const [editingLink, setEditingLink] = useState<QuickLink | null>(null);
   const [loading, setLoading] = useState(true);
-  const router = useRouter();
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     title: '',
@@ -140,7 +140,7 @@ export default function QuickLinksPage() {
     );
 
     if (!authCookie || !authCookie.includes('authenticated')) {
-      router.push('/login');
+      navigate('/login');
       return;
     }
 
