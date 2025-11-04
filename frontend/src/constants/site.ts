@@ -2,6 +2,7 @@
 // export const GTM_ID = 'GTM-WRVS7FN2';
 
 export const SITE_URL = '';
+export const SITE_NAME = 'Portal';
 export const SUB_PAGE_URL = SITE_URL + '/w';
 
 export const FOOTBALL_PATH = '/w/football';
