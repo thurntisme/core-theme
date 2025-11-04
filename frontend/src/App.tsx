@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import LandingLayout from './components/layouts/landing/LandingLayout';
+import AuthLayout from './components/layouts/portal/AuthLayout';
 import PortalLayout from './components/layouts/portal/PortalLayout';
 import AboutPage from './pages/landing/about/page';
 import BlogPage from './pages/landing/blog/page';
@@ -44,6 +45,10 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
         </Route>
 
+        <Route element={<AuthLayout />}>
+          <Route path="/portal/auth/login" element={<LoginPage />} />
+        </Route>
+
         <Route element={<PortalLayout />}>
           {/* Portal routes */}
           <Route path="/portal" element={<PortalIndexPage />} />
@@ -57,7 +62,6 @@ function App() {
           <Route path="/portal/income" element={<IncomePage />} />
           <Route path="/portal/journal" element={<JournalPage />} />
           <Route path="/portal/leader" element={<LeaderPage />} />
-          <Route path="/portal/auth/login" element={<LoginPage />} />
           <Route path="/portal/plan" element={<PlanPage />} />
           <Route
             path="/portal/project-reports"
