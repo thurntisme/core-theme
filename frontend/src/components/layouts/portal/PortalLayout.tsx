@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
 
 import LoadingScreen from '@/components/common/loading-screen';
-import Header from '@/components/p/header';
+import Header from '@/components/layouts/portal/Header';
 import { PORTAL_URL } from '@/constants/site';
 import { isLoggedIn } from '@/lib/auth';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';

@@ -1,9 +1,10 @@
 'use client';
 
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 import { LogOut, Trophy } from 'lucide-react';
 
+import ConfirmDialog from '@/components/common/confirm-dialog';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { PORTAL_URL } from '@/constants/site';
@@ -30,7 +31,7 @@ const Header = ({ isAuthenticated }: Props) => {
   const handleLogout = () => {
     document.cookie =
       'auth-session=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT';
-    navigate(`${PORTAL_URL}/login`);
+    navigate(`${PORTAL_URL}/auth/login`);
   };
 
   return (
@@ -55,13 +56,18 @@ const Header = ({ isAuthenticated }: Props) => {
                     {totalPoints} points
                   </Badge>
                 </div>
-                <Button
-                  variant="outline"
-                  onClick={handleLogout}
-                  className="flex items-center gap-2 bg-transparent"
+                <ConfirmDialog
+                  title="Confirm logout"
+                  description="Are you sure you want to log out?"
+                  onConfirm={handleLogout}
                 >
-                  <LogOut className="h-4 w-4" />
-                </Button>
+                  <Button
+                    variant="outline"
+                    className="flex items-center gap-2 bg-transparent"
+                  >
+                    <LogOut className="h-4 w-4" />
+                  </Button>
+                </ConfirmDialog>
               </>
             )}
           </div>
