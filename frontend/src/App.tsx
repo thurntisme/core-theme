@@ -57,7 +57,7 @@ function App() {
           <Route path="/portal/income" element={<IncomePage />} />
           <Route path="/portal/journal" element={<JournalPage />} />
           <Route path="/portal/leader" element={<LeaderPage />} />
-          <Route path="/portal/login" element={<LoginPage />} />
+          <Route path="/portal/auth/login" element={<LoginPage />} />
           <Route path="/portal/plan" element={<PlanPage />} />
           <Route
             path="/portal/project-reports"

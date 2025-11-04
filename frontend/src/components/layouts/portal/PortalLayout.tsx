@@ -1,36 +1,25 @@
 'use client';
 
-import type React from 'react';
 import { useEffect, useState } from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
 
 import Header from '@/components/p/header';
 import { PORTAL_URL } from '@/constants/site';
+import { isLoggedIn } from '@/lib/auth';
 
 import './app.css';
 
 export default function PortalLayout() {
   const [loading, setLoading] = useState(true);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Check authentication
     const checkAuth = () => {
-      const cookies = document.cookie.split(';');
-      const authCookie = cookies.find((cookie) =>
-        cookie.trim().startsWith('auth-session=')
-      );
-
-      if (authCookie && authCookie.includes('authenticated')) {
-        // Award daily login points (only once per day)
-        const today = new Date().toISOString().split('T')[0];
-        const lastLogin = localStorage.getItem('freelancer-last-login');
-
-        if (lastLogin !== today) {
-          localStorage.setItem('freelancer-last-login', today);
-        }
+      if (isLoggedIn()) {
+        setIsAuthenticated(true);
       } else {
-        navigate(`${PORTAL_URL}/login`);
+        navigate(`${PORTAL_URL}/auth/login`);
       }
       setLoading(false);
     };
@@ -51,7 +40,7 @@ export default function PortalLayout() {
 
   return (
     <div id="portal-app">
-      <Header />
+      <Header isAuthenticated={isAuthenticated} />
       <div className="min-h-screen bg-gray-50">
         <Outlet />
       </div>
