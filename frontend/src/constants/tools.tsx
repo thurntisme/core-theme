@@ -19,7 +19,9 @@ import {
   Users,
 } from 'lucide-react';
 
-export const toolCategories = [
+import type { PortalCategory } from '@/types/portal';
+
+export const toolCategories: PortalCategory[] = [
   {
     title: 'Work Management',
     tools: [
@@ -29,7 +31,7 @@ export const toolCategories = [
         icon: Users,
         status: 'active',
         color: 'bg-orange-500',
-        link: '/clients',
+        slug: 'clients',
       },
       {
         name: 'Project Scheduler',
@@ -37,7 +39,7 @@ export const toolCategories = [
         icon: Calendar,
         status: 'active',
         color: 'bg-indigo-500',
-        link: '/projects',
+        slug: 'projects',
       },
       {
         name: 'Task Tracker',
@@ -45,7 +47,7 @@ export const toolCategories = [
         icon: Clock,
         status: 'active',
         color: 'bg-green-500',
-        link: '/tasks',
+        slug: 'tasks',
       },
       {
         name: 'Estimation',
@@ -53,7 +55,7 @@ export const toolCategories = [
         icon: Calculator,
         status: 'active',
         color: 'bg-purple-500',
-        link: '/estimations',
+        slug: 'estimations',
       },
       {
         name: 'Project Reports',
@@ -61,7 +63,7 @@ export const toolCategories = [
         icon: FileText,
         status: 'active',
         color: 'bg-indigo-500',
-        link: '/project-reports',
+        slug: 'project-reports',
       },
     ],
   },
@@ -74,7 +76,7 @@ export const toolCategories = [
         icon: Briefcase,
         status: 'active',
         color: 'bg-emerald-500',
-        link: '/resume',
+        slug: 'resume',
       },
     ],
   },
@@ -87,7 +89,7 @@ export const toolCategories = [
         icon: Contact,
         status: 'active',
         color: 'bg-cyan-500',
-        link: '/leader',
+        slug: 'leader',
       },
     ],
   },
@@ -100,7 +102,7 @@ export const toolCategories = [
         icon: FileText,
         status: 'coming-soon',
         color: 'bg-blue-500',
-        link: '#',
+        slug: '#',
       },
       {
         name: 'Revenue Dashboard',
@@ -108,7 +110,7 @@ export const toolCategories = [
         icon: DollarSign,
         status: 'coming-soon',
         color: 'bg-emerald-500',
-        link: '#',
+        slug: '#',
       },
       {
         name: 'Analytics Hub',
@@ -116,7 +118,7 @@ export const toolCategories = [
         icon: BarChart3,
         status: 'coming-soon',
         color: 'bg-pink-500',
-        link: '#',
+        slug: '#',
       },
     ],
   },
@@ -129,7 +131,7 @@ export const toolCategories = [
         icon: CheckCircle,
         status: 'active',
         color: 'bg-teal-500',
-        link: '/todos',
+        slug: 'todos',
       },
       {
         name: 'Quick Links',
@@ -137,7 +139,7 @@ export const toolCategories = [
         icon: ExternalLink,
         status: 'active',
         color: 'bg-indigo-500',
-        link: '/quick-links',
+        slug: 'quick-links',
       },
       {
         name: 'Bookmark Manager',
@@ -145,7 +147,7 @@ export const toolCategories = [
         icon: Bookmark,
         status: 'active',
         color: 'bg-violet-500',
-        link: '/bookmarks',
+        slug: 'bookmarks',
       },
       {
         name: 'Habit Manager',
@@ -153,7 +155,7 @@ export const toolCategories = [
         icon: Calendar,
         status: 'active',
         color: 'bg-emerald-500',
-        link: '/habits',
+        slug: 'habits',
       },
       {
         name: 'Workout Manager',
@@ -161,7 +163,7 @@ export const toolCategories = [
         icon: Dumbbell,
         status: 'active',
         color: 'bg-red-500',
-        link: '/workouts',
+        slug: 'workouts',
       },
       {
         name: 'Journal',
@@ -169,7 +171,7 @@ export const toolCategories = [
         icon: BookOpen,
         status: 'active',
         color: 'bg-indigo-600',
-        link: '/journal',
+        slug: 'journal',
       },
       {
         name: 'Planner',
@@ -178,7 +180,7 @@ export const toolCategories = [
         icon: CalendarDays,
         status: 'active',
         color: 'bg-cyan-600',
-        link: '/plan',
+        slug: 'plan',
       },
     ],
   },
@@ -191,7 +193,7 @@ export const toolCategories = [
         icon: DollarSign,
         status: 'active',
         color: 'bg-green-500',
-        link: '/income',
+        slug: 'income',
       },
       {
         name: 'Finance Management',
@@ -199,7 +201,7 @@ export const toolCategories = [
         icon: PieChart,
         status: 'active',
         color: 'bg-emerald-600',
-        link: '/finance',
+        slug: 'finance',
       },
     ],
   },
@@ -212,7 +214,7 @@ export const toolCategories = [
         icon: Activity,
         status: 'active',
         color: 'bg-cyan-500',
-        link: '/activity',
+        slug: 'activity',
       },
       {
         name: 'Settings Panel',
@@ -220,7 +222,7 @@ export const toolCategories = [
         icon: Settings,
         status: 'active',
         color: 'bg-gray-500',
-        link: '/settings',
+        slug: 'settings',
       },
     ],
   },

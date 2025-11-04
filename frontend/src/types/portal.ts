@@ -1,7 +1,15 @@
+export type PortalCategory = {
+  title: string;
+  tools: PortalTool[];
+};
+
 export type PortalTool = {
-  status: string;
-  link: string;
   name: string;
+  description: string;
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  status: string;
+  color: string;
+  slug: string;
 };
 
 export interface Activity {
